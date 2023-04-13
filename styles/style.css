@@ -1,4 +1,43 @@
+:root {
+	--my-font-text: "Nunito", cursive;
+	--my-font-heading: "Pacifico", cursive;
+}
+
+html {
+	height: 100%;
+}
+
 body {
-	margin: 60px auto;
+	height: 80%;
+	margin: 80px auto;
 	max-width: 800px;
+	font-family: var(--my-font-text);
+	font-size: 18px;
+	font-weight: 500;
+}
+
+h1 {
+	font-family: var(--my-font-heading);
+	margin-bottom: 70px;
+}
+
+h2 {
+	font-family: var(--my-font-heading);
+	margin-bottom: 50px;
+}
+
+p {
+}
+
+.my-font-heading {
+	font-family: var(--my-font-heading);
+}
+
+#navbar-avatar {
+	max-width: 40px;
+}
+
+#she-codes-logo {
+	max-width: 200px;
+	margin-bottom: 30px;
 }
