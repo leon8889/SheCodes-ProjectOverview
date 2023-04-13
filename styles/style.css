@@ -38,3 +38,22 @@ h2 {
 	max-width: 200px;
 	margin-bottom: 30px;
 }
+
+@media (max-width: 576px) {
+	#home {
+		max-width: 300px;
+	}
+	#home #Home-Project-Collection {
+		text-align: center;
+	}
+	#projects #My-Project-Collection img {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	#about-me #about-me-avatar {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+}
