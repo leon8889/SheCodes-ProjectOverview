@@ -1,4 +1,4 @@
-var myNavbar = "";
+let myNavbar = "";
 
 myNavbar +=
 	'<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">';
@@ -23,17 +23,19 @@ myNavbar += '		<div class="collapse navbar-collapse" id="navbarNav">';
 myNavbar += '			<ul class="navbar-nav">';
 myNavbar += '				<li class="nav-item">';
 myNavbar +=
-	'					<a class="nav-link active" aria-current="page" href="index.html"  title="Home">';
+	'					<a class="nav-link active" aria-current="page" href="index.html"  title="Home" id="nav-home">';
 myNavbar += "						Home";
 myNavbar += "					</a>";
 myNavbar += "				</li>";
 myNavbar += '				<li class="nav-item">';
-myNavbar += '					<a class="nav-link" href="projects.html"  title="my Projects">';
+myNavbar +=
+	'					<a class="nav-link" href="projects.html"  title="Projects" id="nav-projects">';
 myNavbar += "						Projects";
 myNavbar += "					</a>";
 myNavbar += "				</li>";
 myNavbar += '				<li class="nav-item">';
-myNavbar += '					<a class="nav-link" href="about_me.html"  title="About Me">';
+myNavbar +=
+	'					<a class="nav-link" href="about_me.html"  title="About Me" id="nav-about-me">';
 myNavbar += "						About Me";
 myNavbar += "					</a>";
 myNavbar += "				</li>";
@@ -47,4 +49,15 @@ function includeNavbar() {
 	navbarElement.innerHTML = myNavbar;
 }
 
+function toggleActive() {
+	let bodyElement = document.querySelector("body");
+	if (bodyElement.id !== "nav-home") {
+		let homeNavElement = document.querySelector("#nav-home");
+		homeNavElement.classList.remove("active");
+		let myNavElement = document.querySelector("#nav-" + bodyElement.id);
+		myNavElement.classList.add("active");
+	}
+}
+
 includeNavbar();
+toggleActive();
